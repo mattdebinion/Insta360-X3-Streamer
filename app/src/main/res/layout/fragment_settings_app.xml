@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.GeneralFragment">
+
+    <!-- The label "App Permissions" -->
+    <TextView
+        android:id="@+id/fragment_settings_app_label_permissions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_label_height"
+        android:gravity="center"
+        android:text="@string/settings_app_label_permissions"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="?android:colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- This table layout shows all the permissions the app needs, and a -->
+    <!-- button to grant each permission individually if necessary -->
+    <TableLayout
+        android:id="@+id/permissionsTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_settings_app_label_permissions">
+
+        <!-- HEADINGS -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_header1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_header2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_header3"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Bluetooth permissions -->
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/permissionTable_icon_bluetooth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_material_error"
+                app:tint="@color/DARK_icon_error_red"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_bluetooth" />
+
+            <ImageButton
+                android:id="@+id/permissionsTable_button_bluetooth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+                android:scaleType="center"
+                android:src="@drawable/ic_material_add_circle"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+
+        <!-- Location permissions -->
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/permissionTable_icon_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_material_error"
+                app:tint="@color/DARK_icon_error_red"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_location" />
+
+            <ImageButton
+                android:id="@+id/permissionsTable_button_location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+                android:scaleType="center"
+                android:src="@drawable/ic_material_add_circle"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+
+        <!-- Microphone permissions -->
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/permissionTable_icon_microphone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_material_error"
+                app:tint="@color/DARK_icon_error_red"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_microphone" />
+
+            <ImageButton
+                android:id="@+id/permissionsTable_button_microphone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+                android:scaleType="center"
+                android:src="@drawable/ic_material_add_circle"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+
+        <!-- USB permissions -->
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/permissionTable_icon_USB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_material_error"
+                app:tint="@color/DARK_icon_error_red"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_USB" />
+
+            <ImageButton
+                android:id="@+id/permissionsTable_button_USB"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+                android:scaleType="center"
+                android:src="@drawable/ic_material_add_circle"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+
+        <!-- Wi-Fi permissions -->
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/permissionTable_icon_WiFi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_material_error"
+                app:tint="@color/DARK_icon_error_red"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_table_WiFi" />
+
+            <ImageButton
+                android:id="@+id/permissionsTable_button_WiFi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+                android:scaleType="center"
+                android:src="@drawable/ic_material_add_circle"
+                tools:ignore="ContentDescription" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- The label "Camera Credentials" -->
+    <TextView
+        android:id="@+id/fragment_settings_app_label_credentials"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_label_height"
+        android:gravity="center"
+        android:text="@string/settings_app_label_credentials"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="?android:colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_settings_app_paragraph_credentialInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permissionsTable" />
+
+    <!-- The paragraph describing how to find camera credentials" -->
+    <TextView
+        android:id="@+id/fragment_settings_app_paragraph_credentialInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center"
+        android:text="@string/settings_app_paragraph_credentialInfo"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="?android:colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/credentialTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_settings_app_label_credentials" />
+
+    <!-- This table layout displays the text field inputs for credentials -->
+    <TableLayout
+        android:id="@+id/credentialTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:stretchColumns="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_settings_app_paragraph_credentialInfo">
+
+        <!-- The name row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_label_name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/settings_camera_ssid"
+                android:inputType="text"
+                tools:ignore="Autofill,LabelFor" />
+        </TableRow>
+
+        <!-- The password row -->
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/settings_app_label_password"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/settings_camera_password"
+                android:inputType="textPassword"
+                tools:ignore="Autofill,LabelFor" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- The visibility icon, will overlay the table at the bottom right -->
+    <ImageView
+        android:id="@+id/settings_password_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:src="@drawable/ic_material_visibility_off"
+        app:layout_constraintBottom_toBottomOf="@id/credentialTable"
+        app:layout_constraintEnd_toEndOf="@id/credentialTable"
+        tools:ignore="ContentDescription" />
+
+    <!-- The edit and confirm icons for the credentials table -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credentialTable">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/credential_button_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+            android:enabled="true"
+            android:text="@string/button_text_edit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_material_edit"
+            app:iconTint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/credential_button_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+            android:enabled="false"
+            android:text="@string/button_text_confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_material_done_all"
+            app:iconTint="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

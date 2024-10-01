@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- The label "Camera Preview" -->
+    <TextView
+        android:id="@+id/fragment_home_label_camerafeed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_label_height"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="?android:colorAccent"
+        android:text="@string/home_label_previewfeed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/capturePlayerFrame"/>
+
+    <!-- This is the frame layout that contains the camera feed and status -->
+    <FrameLayout
+        android:id="@+id/capturePlayerFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toBottomOf="@id/fragment_home_label_camerafeed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_home_label_statistics">
+
+        <com.arashivision.sdkmedia.player.capture.InstaCapturePlayerView
+            android:id="@+id/capturePlayerView"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/capturePlayerFrame_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/capturePlayerFrame_status_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/contentDesc_home_disconnected_signal"
+                android:src="@drawable/ic_material_signal_disconnected"/>
+
+            <TextView
+                android:id="@+id/capturePlayerFrame_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/camera_label_status_notconnected"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- The label "Preview Statistics" -->
+    <TextView
+        android:id="@+id/fragment_home_label_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_label_height"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="?android:colorAccent"
+        android:text="@string/home_label_statistics"
+        app:layout_constraintTop_toBottomOf="@id/capturePlayerFrame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+    <!-- TODO the preview connection stats -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fragment_home_label_statistics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/connection_options">
+        
+    </LinearLayout>
+
+    
+    <!-- The layout contains the camera connection options "Start"/"Stop" and "Pause"-->
+    <LinearLayout
+        android:id="@+id/connection_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_connection"
+            android:enabled="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/button_text_connect"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+            android:padding="@dimen/fragment_button_padding"
+            android:textSize="@dimen/fragment_button_textSize"
+            app:icon="@drawable/ic_material_link"
+            app:iconTint="@color/white"
+            app:iconPadding="8dp"
+            app:iconGravity="textStart"
+            app:cornerRadius="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_pause"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/button_text_pause"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@drawable/dark_generic_button_enabled_states"
+            android:padding="@dimen/fragment_button_padding"
+            android:textSize="@dimen/fragment_button_textSize"
+            app:icon="@drawable/ic_material_link_off"
+            app:iconTint="@color/white"
+            app:iconPadding="8dp"
+            app:iconGravity="textStart"
+            app:cornerRadius="16dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

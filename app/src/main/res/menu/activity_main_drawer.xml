@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_label_connection"
+            android:enabled="false"
+            android:checkable="false"
+            app:actionLayout="@layout/nav_label_camerainfo"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/nav_camera_status"
+            android:enabled="false"
+            android:checkable="false"
+            app:actionLayout="@layout/nav_camera_info"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_material_home"
+            android:title="@string/menu_option_home" />
+
+        <item
+            android:id="@+id/nav_label_settings"
+            android:enabled="false"
+            android:checkable="false"
+            app:actionLayout="@layout/nav_label_settings"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/nav_settings_app"
+            android:icon="@drawable/ic_material_settings"
+            android:title="@string/menu_settings_app" />
+
+        <!-- These buttons should be disabled when camera is disconnected -->
+        <item
+            android:id="@+id/nav_settings_audio"
+            android:icon="@drawable/ic_material_tune"
+            android:title="@string/menu_settings_audio"/>
+        <item
+            android:id="@+id/nav_settings_preview"
+            android:icon="@drawable/ic_material_preview"
+            android:title="@string/menu_settings_camerapreview"/>
+
+        <item
+            android:id="@+id/nav_settings_live"
+            android:icon="@drawable/ic_material_videocam"
+            android:title="@string/menu_settings_cameraliveoptions"/>
+        <!-- These buttons above should be disabled when camera is disconnected -->
+
+        <item
+            android:id="@+id/nav_label_help"
+            android:enabled="false"
+            android:checkable="false"
+            app:actionLayout="@layout/nav_label_help"
+            tools:ignore="MenuTitle" />
+    </group>
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="dev.mattdebinion.onex3streamer.ui.home.HomeFragment"
+        android:label="@string/menu_option_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_settings_app"
+        android:name="dev.mattdebinion.onex3streamer.ui.settings.GeneralFragment"
+        android:label="@string/menu_settings_app"
+        tools:layout="@layout/fragment_settings_app" />
+
+    <fragment
+        android:id="@+id/nav_settings_audio"
+        android:name="dev.mattdebinion.onex3streamer.ui.settings.GeneralFragment"
+        android:label="@string/menu_settings_audio"
+        tools:layout="@layout/fragment_settings_app" />
+
+    <fragment
+        android:id="@+id/nav_settings_preview"
+        android:name="dev.mattdebinion.onex3streamer.ui.settings.GeneralFragment"
+        android:label="@string/menu_settings_camerapreview"
+        tools:layout="@layout/fragment_settings_app" />
+
+    <fragment
+        android:id="@+id/nav_settings_live"
+        android:name="dev.mattdebinion.onex3streamer.ui.settings.GeneralFragment"
+        android:label="@string/menu_settings_cameraliveoptions"
+        tools:layout="@layout/fragment_settings_app" />
+
+</navigation>

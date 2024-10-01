@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">ONE X3 Streamer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Insta360 ONE X3 Streamer</string>
+    <string name="nav_header_subtitle">Solution for livestreaming via RTMP</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_label_camerainfo">Camera Information</string>
+    <string name="menu_label_settings">Settings</string>
+    <string name="menu_label_help">Help</string>
+    <string name="home_label_previewfeed">Camera Preview</string>
+    <string name="home_label_statistics">Preview Statistics</string>
+
+    <string name="settings_app_label_permissions">App Permissions</string>
+    <string name="settings_app_label_credentials">Camera Credentials</string>
+    <string name="settings_app_paragraph_credentialInfo">To find your camera credentials, go to settings on your camera then select Wi-Fi Settings and enter the <b>Name</b> and <b>Password</b> here.</string>
+    <string name="settings_app_table_header1">Status</string>
+    <string name="settings_app_table_header2">Permission</string>
+    <string name="settings_app_table_header3">Grant</string>
+    <string name="settings_app_table_bluetooth">Bluetooth\nFind and connect to Bluetooth devices</string>
+    <string name="settings_app_table_location">Location\nUse device location to find Bluetooth devices</string>
+    <string name="settings_app_table_microphone">Microphone\nRecord microphone inputs from all devices</string>
+    <string name="settings_app_table_USB">USB\nAllow interaction over USB</string>
+    <string name="settings_app_table_WiFi">Wi-Fi\nFind and connect to Wi-Fi networks</string>
+
+    <string name="settings_app_label_name">Name</string>
+    <string name="settings_app_label_password">Password</string>
+
+    <string name="contentDesc_home_disconnected_signal">A disconnected signal logo</string>
+
+    <string name="button_text_connect">Connect</string>
+    <string name="button_text_disconnect">Disconnect</string>>
+    <string name="button_text_pause">Pause</string>
+    <string name="button_text_edit">Edit</string>
+    <string name="button_text_cancel">Cancel</string>
+    <string name="button_text_confirm">Confirm</string>
+
+    <string name="menu_option_home">Home</string>
+    <string name="menu_settings_app">General</string>
+    <string name="menu_settings_audio">Audio Options</string>
+    <string name="menu_settings_camerapreview">Camera Preview</string>
+    <string name="menu_settings_cameraliveoptions">LIVE Configuration</string>
+
+
+    <string name="camera_label_status_notconnected">No camera connected.</string>
+</resources>
